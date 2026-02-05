@@ -47,6 +47,12 @@ const Navbar = () => {
                         About
                     </a>
                     <a
+                        href="#faq"
+                        className="text-sm font-medium hover:text-black/70 transition-colors"
+                    >
+                        FAQ
+                    </a>
+                    <a
                         href="#contact"
                         className="text-sm font-medium hover:text-black/70 transition-colors"
                     >
@@ -82,6 +88,9 @@ const Navbar = () => {
                     </a>
                     <a href="#how-it-works" className="text-base font-medium">
                         About
+                    </a>
+                    <a href="#faq" className="text-base font-medium">
+                        FAQ
                     </a>
                     <a href="#contact" className="text-base font-medium">
                         Contact Us
