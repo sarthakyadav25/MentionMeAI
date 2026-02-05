@@ -229,7 +229,7 @@ const FeatureStep = ({
 ----------------------------------- */
 const Features = () => {
     return (
-        <section className="py-24 relative bg-white">
+        <section id="how-it-works" className="py-24 relative bg-white">
             <div className="max-w-7xl mx-auto px-6 space-y-32 relative">
 
                 {/* SECTION HEADER */}
@@ -243,8 +243,8 @@ const Features = () => {
                 {/* STEP 1 */}
                 <FeatureStep
                     step="01"
-                    title="Find User Questions"
-                    description="We find the exact questions your users ask across the AI ecosystem."
+                    title="Analyze Search Intent with GEO"
+                    description="Uncover the specific questions and intent behind user queries across the AI ecosystem using advanced Generative Engine Optimization analytics."
                     align="left"
                     isLast={false}
                 >
@@ -267,8 +267,8 @@ const Features = () => {
                 {/* STEP 2 */}
                 <FeatureStep
                     step="02"
-                    title="Create the Content"
-                    description="We develop content optimized for AI to establish you as the leading source referenced by AI."
+                    title="GEO-Optimized Content Creation"
+                    description="Develop high-authority content specifically structured for Generative Engine Optimization to ensure your brand is cited as the primary source by AI models."
                     align="right"
                     isLast={false}
                 >
@@ -291,8 +291,8 @@ const Features = () => {
                 {/* STEP 3 */}
                 <FeatureStep
                     step="03"
-                    title="Building Brand Authority"
-                    description="We position your brand as a verified authority, ensuring AI models trust and prioritize your content."
+                    title="Establish Authority & Trust"
+                    description="Position your brand as the definitive industry leader. Our GEO strategies ensure AI models like Perplexity and Gemini recognize and prioritize your content."
                     align="left"
                     isLast={false}
                 >
@@ -315,8 +315,8 @@ const Features = () => {
                 {/* STEP 4 */}
                 <FeatureStep
                     step="04"
-                    title="Increase AI Traffic"
-                    description="We measure incoming traffic from AI bots and optimize continuously to drive sustained growth."
+                    title="Drive & Track AI Traffic"
+                    description="Monitor and increase substantial traffic from AI-driven search engines. We continuously refine your GEO strategy to maintain top recommendations."
                     align="right"
                     isLast={false}
                 >
@@ -339,8 +339,8 @@ const Features = () => {
                 {/* STEP 5 */}
                 <FeatureStep
                     step="05"
-                    title="Increase AI Mentions"
-                    description="We show how your product is increasingly mentioned by AI over time."
+                    title="Amplify AI Brand Mentions"
+                    description="Track and grow your brand's presence in AI-generated answers. Watch as your product becomes the go-to recommendation in the generative search landscape."
                     align="left"
                     isLast={true}
                 >

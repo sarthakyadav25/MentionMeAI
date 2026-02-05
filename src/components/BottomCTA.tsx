@@ -28,8 +28,7 @@ const BottomCTA = () => {
                 </h2>
 
                 <p className="text-lg md:text-xl text-gray-700 mb-12 max-w-xl mx-auto leading-relaxed">
-                    Customers now get recommendations from AI, not Google. Be in those
-                    answers.
+                    Search behavior has shifted to AI. Ensure your brand is the top recommendation.
                 </p>
 
                 <Button
@@ -46,7 +45,7 @@ const BottomCTA = () => {
             text-white
           "
                 >
-                    Start free trial
+                    Call To Action
                 </Button>
             </div>
         </section>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import JsonLd from "@/components/JsonLd";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MentionMe AI - Be the product cited by Perplexity",
-  description: "Customers now get recommendations from AI, not Google. Be in those answers.",
+  title: "MentionMe AI - Get your brand mentioned by Perplexity",
+  description: "Search behavior has shifted to AI. Ensure your brand is the top recommendation.",
 };
 
 export default function RootLayout({
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <JsonLd />
         {children}
       </body>
     </html>

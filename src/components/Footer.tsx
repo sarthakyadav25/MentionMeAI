@@ -1,19 +1,16 @@
+import { Instagram, Youtube, Linkedin } from "lucide-react";
+
 const Footer = () => {
     return (
-        <footer className="py-12 px-6 bg-[#FDFCF8] border-t border-gray-200 text-sm">
+        <footer id="contact" className="py-12 px-6 bg-[#FDFCF8] border-t border-gray-200 text-sm">
             <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
                 <div className="col-span-2">
-                    <div className="leading-none font-serif text-lg tracking-tight mb-4">
-                        <span className="block text-[10px] uppercase tracking-widest text-muted-foreground">
-                            The
-                        </span>
-                        <span className="font-semibold">Prompting</span>
-                        <br />
-                        <span className="font-semibold">Company</span>
+                    <div className="leading-none text-2xl tracking-tight text-gray-900">
+                        <span className="font-serif italic">MentionMe</span>
+                        <span className="font-sans font-bold">AI.</span>
                     </div>
                     <p className="text-gray-500 max-w-xs mt-4">
-                        Customers now get recommendations from AI, not Google. Be in those
-                        answers.
+                        Search behavior has shifted to AI. Ensure your brand is the top recommendation.
                     </p>
                 </div>
 
@@ -24,12 +21,7 @@ const Footer = () => {
                     <ul className="space-y-3 text-gray-500">
                         <li>
                             <a href="#" className="hover:text-black">
-                                Pricing
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:text-black">
-                                Enterprise
+                                Call To Action
                             </a>
                         </li>
                         <li>
@@ -37,21 +29,42 @@ const Footer = () => {
                                 Careers
                             </a>
                         </li>
-                        <li>
-                            <a href="#" className="hover:text-black">
-                                LinkedIn
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:text-black">
-                                X/Twitter
-                            </a>
-                        </li>
                     </ul>
+
+                    <h4 className="font-bold mt-8 mb-4 text-gray-900 uppercase text-xs tracking-wider">
+                        Socials
+                    </h4>
+                    <div className="flex gap-4 text-gray-500">
+                        <a href="#" className="hover:text-black transition-colors">
+                            <Instagram size={20} />
+                        </a>
+                        <a href="#" className="hover:text-black transition-colors">
+                            <Youtube size={20} />
+                        </a>
+                        <a href="#" className="hover:text-black transition-colors">
+                            <Linkedin size={20} />
+                        </a>
+                    </div>
                 </div>
 
                 <div>
                     <h4 className="font-bold mb-4 text-gray-900 uppercase text-xs tracking-wider">
+                        Contact
+                    </h4>
+                    <ul className="space-y-3 text-gray-500">
+                        <li>
+                            <a href="mailto:sales@mentionmeai.com" className="hover:text-black">
+                                sales@mentionmeai.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:support@mentionmeai.com" className="hover:text-black">
+                                support@mentionmeai.com
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h4 className="font-bold mt-8 mb-4 text-gray-900 uppercase text-xs tracking-wider">
                         Legal
                     </h4>
                     <ul className="space-y-3 text-gray-500">
@@ -69,7 +82,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-100 text-gray-400 text-xs">
-                &copy; 2024 The Prompting Company, Inc.
+                &copy; 2026 MentionMeAI, Inc.
             </div>
         </footer>
     );

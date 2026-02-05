@@ -26,41 +26,43 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center gap-2 cursor-pointer group">
-                    <div className="leading-none font-serif text-lg tracking-tight">
-                        <span className="block text-[10px] uppercase tracking-widest text-muted-foreground">
-                            Mention
-                        </span>
-                        <span className="font-semibold">Me</span>
-                        <br />
-                        <span className="font-semibold">AI</span>
+                    <div className="leading-none text-2xl tracking-tight text-gray-900">
+                        <span className="font-serif italic">MentionMe</span>
+                        <span className="font-sans font-bold">AI.</span>
                     </div>
                 </div>
 
                 {/* Desktop Links */}
                 <div className="hidden md:flex items-center gap-8">
                     <a
-                        href="#"
+                        href="#home"
                         className="text-sm font-medium hover:text-black/70 transition-colors"
                     >
-                        Pricing
+                        Home
+                    </a>
+                    <a
+                        href="#how-it-works"
+                        className="text-sm font-medium hover:text-black/70 transition-colors"
+                    >
+                        About
+                    </a>
+                    <a
+                        href="#contact"
+                        className="text-sm font-medium hover:text-black/70 transition-colors"
+                    >
+                        Contact Us
                     </a>
                     <a
                         href="#"
                         className="text-sm font-medium hover:text-black/70 transition-colors"
                     >
-                        Enterprise
+                        Blogs
                     </a>
                 </div>
 
                 {/* Actions */}
                 <div className="hidden md:flex items-center gap-4">
-                    <a
-                        href="#"
-                        className="text-sm font-medium hover:text-black/70 transition-colors"
-                    >
-                        Sign in
-                    </a>
-                    <Button className="rounded-full">Start free trial</Button>
+                    <Button className="rounded-full">Call To Action</Button>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -75,17 +77,20 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {mobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 p-6 flex flex-col gap-4 shadow-lg animate-in slide-in-from-top-2">
-                    <a href="#" className="text-base font-medium">
-                        Pricing
+                    <a href="#home" className="text-base font-medium">
+                        Home
+                    </a>
+                    <a href="#how-it-works" className="text-base font-medium">
+                        About
+                    </a>
+                    <a href="#contact" className="text-base font-medium">
+                        Contact Us
                     </a>
                     <a href="#" className="text-base font-medium">
-                        Enterprise
+                        Blogs
                     </a>
                     <hr />
-                    <a href="#" className="text-base font-medium">
-                        Sign in
-                    </a>
-                    <Button className="w-full rounded-full">Start free trial</Button>
+                    <Button className="w-full rounded-full">Call To Action</Button>
                 </div>
             )}
         </nav>
