@@ -7,6 +7,7 @@ import Enterprise from "@/components/Enterprise";
 import News from "@/components/News";
 import BottomCTA from "@/components/BottomCTA";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 
 export default function Home() {
   return (
@@ -35,6 +36,9 @@ export default function Home() {
         <div className="border-b border-black/30 w-screen relative left-1/2 -translate-x-1/2 " /> */}
 
         <BottomCTA />
+        <div className="border-b border-black/30 w-screen relative left-1/2 -translate-x-1/2 " />
+
+        <FAQ />
         <div className="border-b border-black/30 w-screen relative left-1/2 -translate-x-1/2 " />
       </main>
       <Footer />
