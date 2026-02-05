@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Hero = () => {
     return (
-        <section className="    relative w-full mt-[10vh]  h-[85vh] flex flex-col lg:flex-row overflow-hidden bg-white">
+        <section id="home" className="    relative w-full mt-[10vh]  h-[85vh] flex flex-col lg:flex-row overflow-hidden bg-white">
             {/* Left Column: Text Content */}
             <div className="w-full lg:w-1/2 flex items-center justify-center pl-3 pr-6 md:pr-12 lg:pr-24 py-20 lg:py-0 relative z-10">
                 <motion.div
@@ -18,13 +18,12 @@ const Hero = () => {
 
 
                     <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6 text-gray-900 tracking-tight">
-                        Be the product cited by{" "}
+                        Get your brand mentioned by{" "}
                         <span className="italic font-light">Perplexity</span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                        Customers now get recommendations from AI, not Google. Be in those
-                        answers.
+                        Search behavior has shifted to AI. Ensure your brand is the top recommendation.
                     </p>
 
                     <div className="flex flex-wrap gap-4">
@@ -32,7 +31,7 @@ const Hero = () => {
                             size="lg"
                             className="rounded-full bg-black text-white hover:bg-gray-800 px-8 h-12 text-base shadow-lg hover:shadow-xl transition-all"
                         >
-                            Start free trial
+                            Call To Action
                         </Button>
                     </div>
                 </motion.div>
