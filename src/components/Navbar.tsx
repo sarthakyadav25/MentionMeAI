@@ -68,7 +68,9 @@ const Navbar = () => {
 
                 {/* Actions */}
                 <div className="hidden md:flex items-center gap-4">
-                    <Button className="rounded-full">Call To Action</Button>
+                    <a href="#book-meet">
+                        <Button className="rounded-full">Call To Action</Button>
+                    </a>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -99,7 +101,9 @@ const Navbar = () => {
                         Blogs
                     </a>
                     <hr />
-                    <Button className="w-full rounded-full">Call To Action</Button>
+                    <a href="#book-meet" className="w-full">
+                        <Button className="w-full rounded-full">Call To Action</Button>
+                    </a>
                 </div>
             )}
         </nav>

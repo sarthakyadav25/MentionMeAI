@@ -27,12 +27,14 @@ const Hero = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-4">
-                        <Button
-                            size="lg"
-                            className="rounded-full bg-black text-white hover:bg-gray-800 px-8 h-12 text-base shadow-lg hover:shadow-xl transition-all"
-                        >
-                            Call To Action
-                        </Button>
+                        <a href="#book-meet">
+                            <Button
+                                size="lg"
+                                className="rounded-full bg-black text-white hover:bg-gray-800 px-8 h-12 text-base shadow-lg hover:shadow-xl transition-all"
+                            >
+                                Call To Action
+                            </Button>
+                        </a>
                     </div>
                 </motion.div>
             </div>
