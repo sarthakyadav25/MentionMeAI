@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import LogoTicker from "@/components/LogoTicker";
 import Features from "@/components/Features";
 import Testimonial from "@/components/Testimonial";
-import Enterprise from "@/components/Enterprise";
+import BookMeet from "@/components/BookMeet";
 import News from "@/components/News";
 import BottomCTA from "@/components/BottomCTA";
 import Footer from "@/components/Footer";
@@ -29,7 +29,7 @@ export default function Home() {
         <Testimonial />
         <div className="border-b border-black/30 w-screen relative left-1/2 -translate-x-1/2 " />
 
-        <Enterprise />
+        <BookMeet />
         <div className="border-b border-black/30 w-screen relative left-1/2 -translate-x-1/2 " />
 
         {/* <News />

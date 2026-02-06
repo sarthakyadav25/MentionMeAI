@@ -31,22 +31,24 @@ const BottomCTA = () => {
                     Search behavior has shifted to AI. Ensure your brand is the top recommendation.
                 </p>
 
-                <Button
-                    size="lg"
-                    className="
-            rounded-full
-            px-10
-            h-14
-            text-lg
-            shadow-2xl
-            hover:shadow-xl
-            transition-all
-            bg-black
-            text-white
-          "
-                >
-                    Call To Action
-                </Button>
+                <a href="#book-meet" className="inline-block">
+                    <Button
+                        size="lg"
+                        className="
+                rounded-full
+                px-10
+                h-14
+                text-lg
+                shadow-2xl
+                hover:shadow-xl
+                transition-all
+                bg-black
+                text-white
+            "
+                    >
+                        Call To Action
+                    </Button>
+                </a>
             </div>
         </section>
     );
