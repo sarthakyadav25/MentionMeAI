@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -25,46 +26,46 @@ const Navbar = () => {
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
-                <div className="flex items-center gap-2 cursor-pointer group">
+                <Link href="/" className="flex items-center gap-2 cursor-pointer group">
                     <div className="leading-none text-2xl tracking-tight text-gray-900">
                         <span className="font-serif italic">MentionMe</span>
                         <span className="font-sans font-bold">AI.</span>
                     </div>
-                </div>
+                </Link>
 
                 {/* Desktop Links */}
                 <div className="hidden md:flex items-center gap-8">
-                    <a
-                        href="#home"
+                    <Link
+                        href="/#home"
                         className="text-sm font-medium hover:text-black/70 transition-colors"
                     >
                         Home
-                    </a>
-                    <a
-                        href="#how-it-works"
+                    </Link>
+                    <Link
+                        href="/#how-it-works"
                         className="text-sm font-medium hover:text-black/70 transition-colors"
                     >
                         About
-                    </a>
-                    <a
-                        href="#faq"
+                    </Link>
+                    <Link
+                        href="/#faq"
                         className="text-sm font-medium hover:text-black/70 transition-colors"
                     >
                         FAQ
-                    </a>
-                    <a
-                        href="#contact"
+                    </Link>
+                    <Link
+                        href="/#contact"
                         className="text-sm font-medium hover:text-black/70 transition-colors"
                     >
                         Contact Us
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Actions */}
                 <div className="hidden md:flex items-center gap-4">
-                    <a href="#">
+                    <Link href="/blog">
                         <Button className="rounded-full">Read Blogs</Button>
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -79,22 +80,22 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {mobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 p-6 flex flex-col gap-4 shadow-lg animate-in slide-in-from-top-2">
-                    <a href="#home" className="text-base font-medium">
+                    <Link href="/#home" className="text-base font-medium" onClick={() => setMobileMenuOpen(false)}>
                         Home
-                    </a>
-                    <a href="#how-it-works" className="text-base font-medium">
+                    </Link>
+                    <Link href="/#how-it-works" className="text-base font-medium" onClick={() => setMobileMenuOpen(false)}>
                         About
-                    </a>
-                    <a href="#faq" className="text-base font-medium">
+                    </Link>
+                    <Link href="/#faq" className="text-base font-medium" onClick={() => setMobileMenuOpen(false)}>
                         FAQ
-                    </a>
-                    <a href="#contact" className="text-base font-medium">
+                    </Link>
+                    <Link href="/#contact" className="text-base font-medium" onClick={() => setMobileMenuOpen(false)}>
                         Contact Us
-                    </a>
+                    </Link>
                     <hr />
-                    <a href="#" className="w-full">
+                    <Link href="/blog" className="w-full" onClick={() => setMobileMenuOpen(false)}>
                         <Button className="w-full rounded-full">Read Blogs</Button>
-                    </a>
+                    </Link>
                 </div>
             )}
         </nav>
