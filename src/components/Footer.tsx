@@ -1,4 +1,5 @@
 import { Instagram, Youtube, Linkedin } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
     return (
@@ -69,14 +70,14 @@ const Footer = () => {
                     </h4>
                     <ul className="space-y-3 text-gray-500">
                         <li>
-                            <a href="#" className="hover:text-black">
+                            <Link href="/privacy-policy" className="hover:text-black">
                                 Privacy Policy
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" className="hover:text-black">
+                            <Link href="/terms-of-use" className="hover:text-black">
                                 Terms of Use
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
