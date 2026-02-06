@@ -16,8 +16,8 @@ const FAQ = () => {
         <section id="faq" className="py-24 bg-[#FDFCF8] text-gray-900">
             <div className="container mx-auto px-4 max-w-4xl">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-transparent bg-clip-text">
-                        Frequently Asked Questions
+                    <h2 className="font-serif text-4xl md:text-5xl mb-6 text-gray-900">
+                        Frequently Asked <span className="italic">Questions</span>
                     </h2>
                     <p className="text-xl text-gray-600">
                         Everything you need to know about AI SEO and GEO.

@@ -21,7 +21,7 @@ const Footer = () => {
                     <ul className="space-y-3 text-gray-500">
                         <li>
                             <a href="#" className="hover:text-black">
-                                Call To Action
+                                Book a Call
                             </a>
                         </li>
                         <li>
@@ -35,13 +35,13 @@ const Footer = () => {
                         Socials
                     </h4>
                     <div className="flex gap-4 text-gray-500">
-                        <a href="#" className="hover:text-black transition-colors">
+                        <a href="#" className="hover:text-pink-400 transition-colors">
                             <Instagram size={20} />
                         </a>
-                        <a href="#" className="hover:text-black transition-colors">
+                        <a href="#" className="hover:text-red-500 transition-colors">
                             <Youtube size={20} />
                         </a>
-                        <a href="#" className="hover:text-black transition-colors">
+                        <a href="#" className="hover:text-[#0a66a2] transition-colors">
                             <Linkedin size={20} />
                         </a>
                     </div>

@@ -3,6 +3,30 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { FlipWords } from "@/components/ui/flip-words";
+
+const aiOptions = [
+    {
+        text: "Perplexity",
+        icon: "/logo/perplexity.png",
+    },
+    {
+        text: "ChatGPT",
+        icon: "/logo/chatgpt.png",
+    },
+    {
+        text: "Claude",
+        icon: "/logo/claude.webp",
+    },
+    {
+        text: "Gemini",
+        icon: "/logo/gemini.png",
+    },
+    {
+        text: "Grok",
+        icon: "/logo/grok.svg",
+    }
+];
 
 const Hero = () => {
     return (
@@ -19,7 +43,8 @@ const Hero = () => {
 
                     <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6 text-gray-900 tracking-tight">
                         Get your brand mentioned by{" "}
-                        <span className="italic font-light">Perplexity</span>
+                        <br />
+                        <FlipWords words={aiOptions} className="text-5xl md:text-6xl lg:text-7xl font-light italic text-neutral-600 px-0" />
                     </h1>
 
                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
@@ -30,9 +55,12 @@ const Hero = () => {
                         <a href="#book-meet">
                             <Button
                                 size="lg"
-                                className="rounded-full bg-black text-white hover:bg-gray-800 px-8 h-12 text-base shadow-lg hover:shadow-xl transition-all"
+                                className="group rounded-full flex items-center gap-2 cursor-pointer"
                             >
-                                Call To Action
+                                Book a Call
+                                <p className="transition-transform group-hover:translate-x-2">
+                                    {"->"}
+                                </p>
                             </Button>
                         </a>
                     </div>

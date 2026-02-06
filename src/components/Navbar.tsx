@@ -58,18 +58,12 @@ const Navbar = () => {
                     >
                         Contact Us
                     </a>
-                    <a
-                        href="#"
-                        className="text-sm font-medium hover:text-black/70 transition-colors"
-                    >
-                        Blogs
-                    </a>
                 </div>
 
                 {/* Actions */}
                 <div className="hidden md:flex items-center gap-4">
-                    <a href="#book-meet">
-                        <Button className="rounded-full">Call To Action</Button>
+                    <a href="#">
+                        <Button className="rounded-full">Read Blogs</Button>
                     </a>
                 </div>
 
@@ -97,12 +91,9 @@ const Navbar = () => {
                     <a href="#contact" className="text-base font-medium">
                         Contact Us
                     </a>
-                    <a href="#" className="text-base font-medium">
-                        Blogs
-                    </a>
                     <hr />
-                    <a href="#book-meet" className="w-full">
-                        <Button className="w-full rounded-full">Call To Action</Button>
+                    <a href="#" className="w-full">
+                        <Button className="w-full rounded-full">Read Blogs</Button>
                     </a>
                 </div>
             )}
