@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mentionmeai.com"),
-  title: "MentionMe AI - Get your brand mentioned by Perplexity",
-  description: "Search behavior has shifted to AI. Ensure your brand is the top recommendation.",
+  title: "MentionMe AI | Generative Engine Optimization (GEO) & AI SEO Agency",
+  description: "Dominating Search in the Age of AI. We optimize brands for Answer Engine Optimization (AEO), AI Visibility, and ranking in ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
 };
 
 export default function RootLayout({

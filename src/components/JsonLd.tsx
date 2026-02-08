@@ -91,6 +91,18 @@ const JsonLd = () => {
                         "text": faq.answer
                     }
                 }))
+            },
+            {
+                "@type": "SiteNavigationElement",
+                "@id": "https://mentionmeai.com/#navigation",
+                "name": ["Home", "About", "FAQ", "Contact Us", "Blogs"],
+                "url": [
+                    "https://mentionmeai.com",
+                    "https://mentionmeai.com/#how-it-works",
+                    "https://mentionmeai.com/#faq",
+                    "https://mentionmeai.com/#contact",
+                    "https://mentionmeai.com/blog"
+                ]
             }
         ]
     };
