@@ -2,7 +2,7 @@ import { fetchBySlug, fetchPageBlogs, notion } from '@/lib/notion';
 import bookmarkPlugin from '@notion-render/bookmark-plugin';
 import { NotionRenderer } from '@notion-render/client';
 import hljsPlugin from '@notion-render/hljs-plugin';
-import { Calendar, ArrowLeft } from 'lucide-react';
+import { Calendar, ArrowLeft, User } from 'lucide-react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -50,8 +50,17 @@ export default async function Page({ params }: PageProps) {
     const coverUrl = post.cover?.external?.url || post.cover?.file?.url || null
     // @ts-ignore
     const description = post.properties.Description?.rich_text[0]?.plain_text || post.properties.description?.rich_text[0]?.plain_text || "Read this article on MentionMeAI."
+
+    // Improved author extraction: handles Text (rich_text) and Person (people) properties
     // @ts-ignore
-    const author = post.properties.Author?.rich_text[0]?.plain_text || post.properties.author?.rich_text[0]?.plain_text || "MentionMeAI Team"
+    const author = post.properties.Author?.rich_text?.[0]?.plain_text ||
+        // @ts-ignore
+        post.properties.Author?.people?.[0]?.name ||
+        // @ts-ignore
+        post.properties.author?.rich_text?.[0]?.plain_text ||
+        // @ts-ignore
+        post.properties.author?.people?.[0]?.name ||
+        "MentionMeAI Team"
 
     const formattedDate = new Date(date).toLocaleDateString("en-US", {
         weekday: 'long',
@@ -84,9 +93,16 @@ export default async function Page({ params }: PageProps) {
 
                     <article>
                         <header className="mb-14 text-center space-y-6">
-                            <div className="flex items-center justify-center gap-2 text-sm font-medium text-gray-400 uppercase tracking-wider">
-                                <Calendar className="w-4 h-4" />
-                                <time dateTime={date}>{formattedDate}</time>
+                            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-gray-400 uppercase tracking-wider">
+                                <div className="flex items-center gap-2">
+                                    <Calendar className="w-4 h-4" />
+                                    <time dateTime={date}>{formattedDate}</time>
+                                </div>
+                                <div className="hidden sm:block w-1 h-1 bg-gray-300 rounded-full" />
+                                <div className="flex items-center gap-2">
+                                    <User className="w-4 h-4" />
+                                    <span>{author}</span>
+                                </div>
                             </div>
 
                             <h1 className="font-serif text-4xl md:text-6xl font-medium tracking-tight text-gray-900 leading-[1.1] max-w-4xl mx-auto">

@@ -38,8 +38,39 @@ export const fetchBySlug = cache(async (slug: string) => {
 })
 
 export const fetchPageBlogs = cache(async (pageId: string) => {
-    const response = await notion.blocks.children.list({
-        block_id: pageId,
-    });
-    return response.results as BlockObjectResponse[];
+    const blocks = await fetchChildren(pageId);
+    return blocks;
 })
+
+async function fetchChildren(blockId: string): Promise<BlockObjectResponse[]> {
+    let children: BlockObjectResponse[] = [];
+    let cursor: string | undefined;
+
+    while (true) {
+        const response = await notion.blocks.children.list({
+            block_id: blockId,
+            start_cursor: cursor,
+        });
+
+        const results = response.results as BlockObjectResponse[];
+        children = [...children, ...results];
+
+        if (!response.has_more) {
+            break;
+        }
+        cursor = response.next_cursor as string;
+    }
+
+    // Recursively fetch children for blocks that have them
+    const childrenWithNested = await Promise.all(
+        children.map(async (block) => {
+            if (block.has_children) {
+                // @ts-ignore
+                block.children = await fetchChildren(block.id);
+            }
+            return block;
+        })
+    );
+
+    return childrenWithNested;
+}
