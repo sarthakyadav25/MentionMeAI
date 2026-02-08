@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://mentionmeai.com"),
   title: "MentionMe AI | Generative Engine Optimization (GEO) & AI SEO Agency",
   description: "Dominating Search in the Age of AI. We optimize brands for Answer Engine Optimization (AEO), AI Visibility, and ranking in ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+  icons: {
+    icon: "/icon",
+  },
 };
 
 export default function RootLayout({
