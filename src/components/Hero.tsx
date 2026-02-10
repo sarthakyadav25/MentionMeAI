@@ -16,7 +16,7 @@ const aiOptions = [
     },
     {
         text: "Claude",
-        icon: "/logo/claude.webp",
+        icon: "/logo/claude.png",
     },
     {
         text: "Gemini",
