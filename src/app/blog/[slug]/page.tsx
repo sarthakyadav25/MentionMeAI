@@ -1,4 +1,4 @@
-import { fetchBySlug, fetchPageBlogs, notion } from '@/lib/notion';
+import { fetchBySlug, fetchPageBlogs, fetchPages, notion } from '@/lib/notion';
 import bookmarkPlugin from '@notion-render/bookmark-plugin';
 import { NotionRenderer } from '@notion-render/client';
 import hljsPlugin from '@notion-render/hljs-plugin';
@@ -7,6 +7,16 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogPostSchema from '@/components/BlogPostSchema';
+
+export const dynamic = "force-static";
+export const revalidate = false;
+
+export async function generateStaticParams() {
+    const posts = await fetchPages();
+    return posts.map((post: any) => ({
+        slug: post.properties.slug?.rich_text[0]?.plain_text || post.properties.Slug?.rich_text[0]?.plain_text,
+    }));
+}
 
 type PageProps = {
     params: Promise<{

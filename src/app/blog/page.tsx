@@ -4,7 +4,8 @@ import { BlogList } from '@/components/BlogList';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-export const revalidate = 60; // Revalidate every 60 seconds
+export const dynamic = "force-static";
+export const revalidate = false;
 
 const page = async () => {
     const posts = await fetchPages();
