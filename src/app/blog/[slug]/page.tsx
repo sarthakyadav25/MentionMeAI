@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogPostSchema from '@/components/BlogPostSchema';
+import { Metadata } from 'next';
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -22,6 +23,44 @@ type PageProps = {
     params: Promise<{
         slug: string
     }>
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { slug } = await params;
+    const post = await fetchBySlug(slug);
+
+    if (!post) {
+        return {
+            title: 'Page Not Found',
+        };
+    }
+
+    // @ts-ignore
+    const title = post.properties.Title?.title[0]?.plain_text || "Untitled Post";
+    // @ts-ignore
+    const description = post.properties.Description?.rich_text[0]?.plain_text || post.properties.description?.rich_text[0]?.plain_text || "Read this article on MentionMeAI.";
+
+    // @ts-ignore
+    const coverUrl = post.cover?.external?.url || post.cover?.file?.url || null;
+
+    return {
+        title: `${title} | MentionMe AI`,
+        description: description,
+        openGraph: {
+            title: title,
+            description: description,
+            url: `https://mentionmeai.com/blog/${slug}`,
+            siteName: 'MentionMe AI',
+            images: coverUrl ? [{ url: coverUrl }] : [],
+            type: 'article',
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: title,
+            description: description,
+            images: coverUrl ? [coverUrl] : [],
+        },
+    };
 }
 
 export default async function Page({ params }: PageProps) {
